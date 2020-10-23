@@ -26,7 +26,7 @@ RSpec.describe 'When a user visits a snack show page', type: :feature do
     within('.locations') do
       expect(page).to have_content(dons.location)
       expect(page).to have_content(tiny.location)
-      expect(page).to have_content(tiny.average_snack_price)
+      expect(page).to have_content(tiny.average_snack_price.round(2))
       expect(page).to have_content(dons.snacks.count)
     end
   end
