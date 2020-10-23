@@ -1,0 +1,11 @@
+<h1><%= @snack.name %> Info</h1>
+<p>Price: <%= @snack.price.round(2) %> </p>
+<section class="locations">
+  <h2>Locations</h2>
+  <ul>
+    <% @snack.machines.each do |machine|  %>
+    <li><%= machine.name %> (<%= machine.snack_count %> kinds of snacks, average price of $<%= machine.average_snack_price.round(2) %></li>
+    <% end %>
+  </ul>
+
+</section>
